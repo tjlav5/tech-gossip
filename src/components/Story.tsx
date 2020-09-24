@@ -63,8 +63,8 @@ const StoryPreview: React.FC<{ story: StoryItem }> = ({ story }) => (
   ></iframe>
 );
 
-var decodeHtmlEntity = function (str) {
-  return str.replace(/&?#(\w+);/g, function (match, dec) {
+var decodeHtmlEntity = function (str: string) {
+  return str.replace(/&?#(\w+);/g, function (_, dec) {
     return String.fromCharCode(dec);
   });
 };
